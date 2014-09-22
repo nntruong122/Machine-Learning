@@ -164,11 +164,12 @@ class DecisionTreeBuilder(object):
 
   def predict(self, featureArray):
     root = self.decisionTree.root()
-    while(self.decisionTree.is_leaf(root)):
-      conditionAttrIndex = root._conditionAttrIndex
-      branchSplitValue = featureArray[conditionAttrIndex]
-      if not root._branchSplitMap.has_key(branchSplitValue):
+    while not self.decisionTree.is_leaf(root):
+      conditionAttrIndex = root.element()._conditionAttrIndex
+      # The feature values can turn out to be numbers
+      branchSplitValue = str(featureArray[conditionAttrIndex])
+      if not root.element()._branchSplitMap.has_key(branchSplitValue):
         raise ValueError('Could not predict the classLabel. Unknown feature value')
-      childIndex = root._branchSplitMap[branchSplitValue]
+      childIndex = root.element()._branchSplitMap[branchSplitValue]
       root = self.decisionTree.iThChild(root, childIndex)
     return root.element()._classLabel

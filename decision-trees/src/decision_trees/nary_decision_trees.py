@@ -1,3 +1,5 @@
+#The data structure is adapted from the following book
+#"Data Structures and Algorithms in Python" by Goodrich, Tamassia and Goldwasser
 from linked_nary_trees import LinkedNAryTree
 
 class DecisionTree(LinkedNAryTree):
@@ -22,7 +24,7 @@ class DecisionTree(LinkedNAryTree):
       self._classLabel = label
 
     def __str__(self):
-      return "AttributeIndex: {}; branchSplitMap: {}; ClassLabel: {}".format(self._conditionAttrIndex, self._branchSplitMap, self._classLabel)
+      return "AttributeIndex: {}; branchSplitMap: {}; ClassLabel: {}".format(self._conditionAttrIndex+1, self._branchSplitMap, self._classLabel)
 
   def __init__(self):
     super(DecisionTree, self).__init__()

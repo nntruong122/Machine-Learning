@@ -30,7 +30,7 @@ class DecisionTreeBuilder(object):
       raise ValueError('Depth should atleast be 1')
 
     bestAttrResult = self.getBestAttribute(rowIndicesSet, colIndicesSet)
-    
+
     conditionAttrIndex = bestAttrResult[0]
     countMap = bestAttrResult[1]
     branchSplitMap = {}
@@ -84,7 +84,7 @@ class DecisionTreeBuilder(object):
       raise ValueError('The sets should contains atleast one index')
 
     # If only one attribute is remaining
-    
+
 
     countMap = self.prepareCountMap(rowIndicesSet, colIndicesSet)
     entropy = 1.0
@@ -92,7 +92,7 @@ class DecisionTreeBuilder(object):
       new_entropy = self.entropy(countMap[attribute])
       if entropy >= new_entropy:
         entropy = new_entropy
-        bestAttr = attribute    
+        bestAttr = attribute
     return (bestAttr, countMap)
 
   def prepareCountMap(self, rowIndicesSet, colIndicesSet):
@@ -162,23 +162,23 @@ class DecisionTreeBuilder(object):
 
     return bestClassLabel
 
-  #If a value is present in test set but absent in traning set then we pick the first value of the attribute  
+  #If a value is present in test set but absent in traning set then we pick the first value of the attribute
   def missingValue(self, nodeElement):
-    arrayBranchMap= nodeElement.element()._branchSplitMap.items()  
+    arrayBranchMap= nodeElement.element()._branchSplitMap.items()
     for key, value in arrayBranchMap:
-      if value == 0: 
-        return key 
+      if value == 0:
+        return key
 
   def predict(self, featureArray):
     root = self.decisionTree.root()
-    
+
     while not self.decisionTree.is_leaf(root):
       conditionAttrIndex = root.element()._conditionAttrIndex
       # The feature values can turn out to be numbers
       branchSplitValue = str(featureArray[conditionAttrIndex])
       if not root.element()._branchSplitMap.has_key(branchSplitValue):
         childIndex = root.element()._branchSplitMap[self.missingValue(root)]
-      else:  
+      else:
         childIndex = root.element()._branchSplitMap[branchSplitValue]
       root = self.decisionTree.iThChild(root, childIndex)
     return root.element()._classLabel

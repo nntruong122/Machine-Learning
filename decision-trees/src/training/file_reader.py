@@ -22,6 +22,5 @@ class FileReader(object):
     classLabelsMap={}
     for row in matrix:
        if not classLabelsMap.has_key(row[len(row)-1]):
-        classLabelsMap[row[len(row)-1]]='true'   
-    return sorted(classLabelsMap)   
-        
+        classLabelsMap[row[len(row)-1]]='true'
+    return sorted(classLabelsMap)

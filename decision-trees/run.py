@@ -35,18 +35,7 @@ def main(argv):
   print('Tree Building Complete and Successful')
   print('Height of the tree is {}'.format(dtb.decisionTree.height()))
 
-  # Some debugging print statements for tennis dataset:
-  #dtb.print_Tree()
-  #print(dtb.decisionTree.is_leaf(root))
-  #print(dtb.decisionTree.num_children(root))
-  #y = dtb.decisionTree.iThChild(root, 0)
-  #z = dtb.decisionTree.iThChild(root, 1)
-  #t = dtb.decisionTree.iThChild(root, 2)
-  #print(dtb.decisionTree.is_leaf(y))
-  #print(dtb.decisionTree.is_leaf(z))
-  #print(dtb.decisionTree.is_leaf(t))
-
-  #Testing section  
+  #Testing section
 
   #create a zero initialized confusion matrix
   confusion_matrix=[[0 for j in range(len(fr.getClassLabels()))] for j in range(len(fr.getClassLabels()))]
@@ -64,15 +53,15 @@ def main(argv):
     predicted_classLabel = dtb.predict(row)
     print ('\tActual Label is {}, and Predicted Label is {}'.format(row[len(row)-1], predicted_classLabel))
     #confusion_matrix[int(row[len(row)-1])-1][int(predicted_classLabel)-1]+= 1
-    if not row[len(row)-1]==predicted_classLabel:    
+    if not row[len(row)-1]==predicted_classLabel:
       Error_Count += 1.0
-  #To print confusion matrix for zoo data set uncomment line 66          
+  #To print confusion matrix for zoo data set uncomment line 66
   print ('\n\n------------------Confusion Matrix----------')
   for row in confusion_matrix:
     print row
 
   print('\n\n--------------Error Count----------------')
-  print Error_Count  
+  print Error_Count
   print('\n\n--------------Accuracy----------------')
   print (Total_records-Error_Count)/Total_records
 
@@ -85,3 +74,4 @@ def setpath():
 
 if __name__ == '__main__':
   main(sys.argv[1:])
+{}

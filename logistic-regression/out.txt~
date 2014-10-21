@@ -1,0 +1,99 @@
+
+==================Calulation for weight vector is complete==========
+
+
+ The weight vector
+[1.0509308437288518, -0.7903314666889675, -1.6976809549450271, 1.3432662552781434, -0.6740338973156553, -0.5354444729685767, -0.31907128503027976, 0.43039458158847643, -0.237927671224396, -0.012258416265106603, -0.2921089136010024, -0.21336750655962475, 0.07258166392436466, -0.35480716939843715, -0.0743373964672066, 0.6833362192420677, 1.3432662552781434]
+0.985225968307 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.988456247516 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.892831929513 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.985225968307 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.984171686033 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.985225968307 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.988456247516 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.971251504073 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.964770280794 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.975872978582 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.953911172963 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.97895865298 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.98762958526 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.985225968307 is the predicted value and the true value is 1
+One is detected 
+
+
+
+0.0697847828766 is the predicted value and the true value is 0
+0.0112064063218 is the predicted value and the true value is 0
+0.0112064063218 is the predicted value and the true value is 0
+0.0260840751464 is the predicted value and the true value is 0
+0.0298866798036 is the predicted value and the true value is 0
+0.0369692092967 is the predicted value and the true value is 0
+0.0260840751464 is the predicted value and the true value is 0
+0.20751005856 is the predicted value and the true value is 0
+0.128980852146 is the predicted value and the true value is 0
+0.0684976037243 is the predicted value and the true value is 0
+0.0684976037243 is the predicted value and the true value is 0
+0.0731011734224 is the predicted value and the true value is 0
+0.0953494648991 is the predicted value and the true value is 0
+0.144303134091 is the predicted value and the true value is 0
+0.286999837248 is the predicted value and the true value is 0
+0.215852810823 is the predicted value and the true value is 0
+0.231475216501 is the predicted value and the true value is 0
+0.0546813172159 is the predicted value and the true value is 0
+0.153163715765 is the predicted value and the true value is 0
+0.0988560731782 is the predicted value and the true value is 0
+0.153163715765 is the predicted value and the true value is 0
+The number of ones 0
+The number of zeros 21

@@ -1,0 +1,774 @@
+@relation edulix-train
+
+@attribute Feature1 {Good,Excellent,Average,Low}
+@attribute Feature2 {Excellent,Average,Good,Bad,Low}
+@attribute Feature3 {LOW,AVERAGE,GOOD,HIGH}
+@attribute Feature4 {'Other University','Mumbai University','Hyderabad University','Pune University',IIT,NIT,VIT,'BITS University','College of Engineering'}
+@attribute Feature5 {A-,B,A,B+,B-,A+}
+@attribute Feature6 numeric
+@attribute Feature7 {Low,High}
+@attribute ClassLabel {yes,no}
+
+@data
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',A,0,Low,yes
+Excellent,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,1,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',A-,1,Low,yes
+Excellent,Good,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Good,Good,GOOD,'Hyderabad University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',B,0,Low,yes
+Good,Good,GOOD,'Pune University',B,0,Low,yes
+Good,Good,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Good,LOW,'Other University',B+,0,Low,yes
+Average,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Good,Excellent,GOOD,'Pune University',B,0,Low,yes
+Excellent,Good,AVERAGE,'Pune University',B+,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,IIT,A-,0,Low,yes
+Good,Excellent,GOOD,'Other University',B,0,Low,yes
+Good,Good,AVERAGE,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'Hyderabad University',B+,0,Low,yes
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,yes
+Good,Excellent,HIGH,'Other University',B+,0,High,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,LOW,'Pune University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Good,AVERAGE,'Hyderabad University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Pune University',B,0,Low,yes
+Good,Excellent,AVERAGE,NIT,A-,0,Low,yes
+Excellent,Excellent,GOOD,NIT,B+,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Low,Bad,LOW,NIT,B+,0,Low,yes
+Excellent,Good,LOW,'Hyderabad University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,High,yes
+Excellent,Good,LOW,'Other University',A-,1,Low,yes
+Good,Excellent,GOOD,'Hyderabad University',A-,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Average,AVERAGE,'Mumbai University',B,0,Low,yes
+Low,Bad,LOW,'Other University',A,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Bad,LOW,VIT,B+,0,Low,yes
+Good,Excellent,LOW,'Pune University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',B,1,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',A-,0,Low,yes
+Low,Bad,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Mumbai University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,IIT,B+,1,Low,yes
+Good,Average,LOW,'Mumbai University',B,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Mumbai University',B+,0,Low,yes
+Good,Good,LOW,'Hyderabad University',B,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Hyderabad University',B+,2,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Low,Bad,GOOD,'Other University',B+,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Average,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,HIGH,'Mumbai University',B,0,Low,yes
+Low,Bad,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Average,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Good,HIGH,'Pune University',B+,0,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Good,Good,LOW,VIT,A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,1,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Pune University',B-,1,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,VIT,B+,0,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,AVERAGE,'Pune University',B,0,Low,yes
+Good,Low,GOOD,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Pune University',B,0,Low,yes
+Excellent,Average,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Good,Excellent,LOW,'Pune University',B+,1,High,yes
+Excellent,Good,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,High,yes
+Average,Good,GOOD,'Other University',B,0,Low,yes
+Excellent,Excellent,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Low,Bad,HIGH,NIT,B+,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,High,yes
+Excellent,Good,AVERAGE,'BITS University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,1,Low,yes
+Good,Good,LOW,'Mumbai University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',A-,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,NIT,A-,2,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,'Pune University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,NIT,A-,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Excellent,Low,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Good,LOW,'Other University',B+,0,Low,yes
+Low,Bad,HIGH,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Excellent,GOOD,NIT,A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,1,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Good,Good,LOW,'Pune University',B,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Pune University',B+,0,Low,yes
+Excellent,Excellent,HIGH,'Other University',B+,0,Low,yes
+Excellent,Average,LOW,'Hyderabad University',A-,1,Low,yes
+Excellent,Average,AVERAGE,IIT,A-,1,Low,yes
+Excellent,Average,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Good,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,GOOD,'College of Engineering',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Hyderabad University',B+,0,Low,yes
+Good,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Pune University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Pune University',B,0,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Pune University',A-,0,Low,yes
+Excellent,Good,AVERAGE,IIT,A-,0,Low,yes
+Excellent,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A+,0,Low,yes
+Good,Low,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,AVERAGE,'Pune University',B,0,Low,yes
+Excellent,Excellent,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Excellent,LOW,'Pune University',B,0,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B,3,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Low,Bad,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Hyderabad University',B+,0,Low,yes
+Good,Good,LOW,'Hyderabad University',B+,0,Low,yes
+Excellent,Average,AVERAGE,'Mumbai University',B,0,Low,yes
+Excellent,Good,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,2,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Pune University',B+,1,Low,yes
+Excellent,Excellent,GOOD,'Other University',A-,0,Low,yes
+Good,Excellent,GOOD,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,GOOD,'Pune University',B,0,Low,yes
+Excellent,Excellent,HIGH,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Average,LOW,'Pune University',B,0,Low,yes
+Good,Good,GOOD,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,yes
+Excellent,Good,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,LOW,'Other University',A-,0,Low,yes
+Good,Good,GOOD,'Hyderabad University',A-,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,yes
+Good,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',A-,1,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,LOW,'Other University',A-,0,Low,yes
+Low,Bad,LOW,'Other University',B+,3,Low,yes
+Good,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,LOW,'BITS University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Good,Excellent,LOW,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,AVERAGE,'Pune University',B,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,GOOD,'Other University',B+,0,Low,yes
+Excellent,Average,AVERAGE,NIT,A-,0,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Good,Bad,LOW,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Excellent,GOOD,'Other University',B+,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Average,Good,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Mumbai University',B,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,LOW,'College of Engineering',B+,1,High,yes
+Good,Good,LOW,'Hyderabad University',A-,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Good,LOW,NIT,A-,0,Low,yes
+Excellent,Excellent,HIGH,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Good,Good,LOW,'Hyderabad University',B+,2,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'BITS University',A,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Average,LOW,'Hyderabad University',B+,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',A-,0,Low,yes
+Good,Good,LOW,'College of Engineering',A,0,Low,yes
+Excellent,Excellent,GOOD,'College of Engineering',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,LOW,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Good,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Bad,LOW,'Mumbai University',A-,0,Low,yes
+Good,Excellent,LOW,'Pune University',B,1,Low,yes
+Good,Excellent,LOW,'Other University',A-,0,Low,yes
+Good,Excellent,GOOD,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',B+,1,Low,yes
+Excellent,Good,AVERAGE,'College of Engineering',A-,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,Low,yes
+Good,Good,GOOD,'Pune University',B,0,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B,0,Low,yes
+Excellent,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',A-,0,Low,yes
+Excellent,Good,LOW,'Mumbai University',B,0,Low,yes
+Good,Good,LOW,'Other University',A-,1,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Pune University',B,0,Low,yes
+Good,Excellent,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Average,GOOD,'Pune University',B,0,Low,yes
+Low,Bad,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Good,Average,AVERAGE,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'College of Engineering',B+,0,Low,yes
+Excellent,Good,LOW,'Mumbai University',B,0,Low,yes
+Good,Excellent,HIGH,NIT,B+,0,Low,yes
+Excellent,Low,LOW,'Mumbai University',B+,1,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,GOOD,'Mumbai University',B,0,Low,yes
+Good,Good,GOOD,'Other University',A-,1,Low,yes
+Good,Good,GOOD,'Pune University',B+,0,Low,yes
+Good,Good,LOW,'Mumbai University',B,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',A,0,Low,yes
+Good,Excellent,HIGH,'Other University',A-,0,Low,yes
+Good,Average,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Good,Excellent,LOW,'Mumbai University',A,0,Low,yes
+Good,Average,AVERAGE,'Other University',B+,1,Low,yes
+Excellent,Good,LOW,'Pune University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,LOW,'Mumbai University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Pune University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',A-,0,Low,yes
+Good,Excellent,GOOD,'Hyderabad University',B,0,Low,yes
+Good,Average,LOW,'Other University',B+,0,Low,yes
+Excellent,Average,LOW,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,LOW,VIT,B+,2,Low,yes
+Excellent,Good,LOW,'Pune University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,yes
+Good,Good,LOW,'BITS University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',B+,0,High,yes
+Excellent,Excellent,GOOD,'Pune University',B+,0,High,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,High,yes
+Excellent,Average,LOW,'Mumbai University',B,0,Low,yes
+Good,Low,AVERAGE,'Mumbai University',B+,1,Low,yes
+Excellent,Average,AVERAGE,'Hyderabad University',B+,0,Low,yes
+Good,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Good,Excellent,HIGH,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,LOW,'Mumbai University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,2,Low,yes
+Excellent,Average,AVERAGE,'Pune University',B+,0,Low,yes
+Good,Excellent,LOW,'Other University',B+,0,Low,yes
+Low,Bad,HIGH,'Other University',A-,0,Low,yes
+Good,Good,LOW,'Other University',A-,0,Low,yes
+Excellent,Excellent,LOW,'Other University',A,0,Low,yes
+Low,Bad,LOW,'BITS University',B+,0,Low,yes
+Excellent,Good,LOW,VIT,A-,0,Low,yes
+Excellent,Excellent,GOOD,NIT,A-,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,LOW,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,yes
+Excellent,Excellent,AVERAGE,'Mumbai University',B+,0,Low,yes
+Excellent,Good,GOOD,'Other University',A,0,Low,yes
+Good,Excellent,GOOD,'Mumbai University',B,0,Low,yes
+Good,Low,GOOD,'Pune University',B+,0,Low,yes
+Excellent,Average,AVERAGE,'Other University',A-,1,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,GOOD,'Mumbai University',B+,1,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',A,0,Low,yes
+Excellent,Excellent,HIGH,'Mumbai University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,yes
+Good,Excellent,GOOD,'Other University',B+,0,Low,yes
+Excellent,Excellent,GOOD,'Pune University',B,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Mumbai University',B,0,Low,yes
+Excellent,Low,AVERAGE,NIT,A-,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Low,Bad,GOOD,'Other University',A-,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,yes
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,yes
+Good,Good,AVERAGE,'Other University',A-,0,Low,yes
+Good,Good,AVERAGE,'Pune University',B+,0,Low,yes
+Good,Good,GOOD,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,'College of Engineering',B,1,Low,yes
+Good,Good,GOOD,'BITS University',A-,0,Low,yes
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,yes
+Excellent,Excellent,AVERAGE,NIT,A-,0,Low,yes
+Low,Bad,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Good,GOOD,'Pune University',B+,0,Low,yes
+Excellent,Average,AVERAGE,'Mumbai University',B,0,Low,yes
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,yes
+Excellent,Excellent,AVERAGE,'Pune University',B,0,Low,yes
+Good,Excellent,AVERAGE,'Pune University',B+,0,Low,yes
+Excellent,Average,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,1,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Excellent,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Excellent,AVERAGE,'Hyderabad University',A-,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Excellent,GOOD,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Excellent,Excellent,HIGH,'Mumbai University',B+,0,Low,no
+Good,Average,GOOD,'Other University',B+,0,Low,no
+Excellent,Good,GOOD,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'College of Engineering',B+,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B+,3,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Average,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,no
+Good,Good,GOOD,'Mumbai University',B-,0,Low,no
+Good,Good,AVERAGE,IIT,B+,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Excellent,Average,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,A-,0,Low,no
+Good,Good,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,NIT,B+,0,Low,no
+Good,Excellent,GOOD,'Other University',A-,0,Low,no
+Excellent,Good,GOOD,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,GOOD,'BITS University',B,0,Low,no
+Average,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,GOOD,'Other University',B-,0,Low,no
+Good,Bad,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Average,Average,LOW,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,GOOD,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Excellent,GOOD,'Pune University',B,0,Low,no
+Good,Low,AVERAGE,'Mumbai University',B-,0,Low,no
+Good,Bad,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'BITS University',B+,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Low,Bad,AVERAGE,NIT,B+,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,A,0,Low,no
+Excellent,Good,AVERAGE,IIT,A-,0,Low,no
+Excellent,Good,GOOD,'Mumbai University',B+,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Excellent,GOOD,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,GOOD,'Mumbai University',B+,0,Low,no
+Excellent,Good,GOOD,IIT,A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'College of Engineering',A,0,High,no
+Excellent,Excellent,GOOD,'Pune University',B,0,Low,no
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,High,no
+Excellent,Low,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Excellent,GOOD,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Excellent,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Average,LOW,VIT,B,0,Low,no
+Excellent,Excellent,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,GOOD,'Other University',A-,0,Low,no
+Good,Low,AVERAGE,'College of Engineering',A-,0,Low,no
+Excellent,Good,GOOD,'Other University',B,0,High,no
+Excellent,Low,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,B+,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',B,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Average,GOOD,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,NIT,B+,0,Low,no
+Good,Excellent,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,GOOD,'Hyderabad University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'College of Engineering',A-,0,Low,no
+Excellent,Good,GOOD,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,IIT,B+,0,Low,no
+Good,Average,AVERAGE,'Other University',B,0,Low,no
+Excellent,Excellent,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,A-,0,Low,no
+Good,Average,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Excellent,GOOD,'BITS University',B+,0,Low,no
+Good,Excellent,HIGH,'Mumbai University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Average,Excellent,AVERAGE,'Other University',B,0,Low,no
+Average,Good,AVERAGE,'College of Engineering',B-,0,Low,no
+Average,Good,AVERAGE,'College of Engineering',B-,0,Low,no
+Good,Excellent,GOOD,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Bad,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',B+,0,Low,no
+Good,Average,AVERAGE,'Hyderabad University',B-,0,Low,no
+Good,Bad,AVERAGE,'Other University',B+,0,Low,no
+Average,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Excellent,AVERAGE,'College of Engineering',A-,0,Low,no
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B-,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',A-,0,Low,no
+Excellent,Excellent,GOOD,'Other University',A-,0,Low,no
+Average,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Good,GOOD,'Other University',A-,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',A-,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',A-,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Average,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',A-,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,no
+Excellent,Excellent,AVERAGE,IIT,A-,0,High,no
+Good,Average,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Excellent,AVERAGE,'BITS University',B+,0,Low,no
+Good,Average,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',A-,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Average,AVERAGE,'Hyderabad University',B+,0,Low,no
+Average,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,VIT,A-,0,Low,no
+Good,Good,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,GOOD,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,NIT,B+,0,Low,no
+Excellent,Average,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B-,0,Low,no
+Good,Good,GOOD,'Other University',B+,0,Low,no
+Good,Good,GOOD,'Hyderabad University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Average,GOOD,'Mumbai University',B,0,Low,no
+Excellent,Good,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,B+,0,Low,no
+Excellent,Low,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,High,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Average,AVERAGE,VIT,B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Average,AVERAGE,'Hyderabad University',A-,0,Low,no
+Excellent,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,NIT,B+,0,Low,no
+Excellent,Bad,AVERAGE,'Hyderabad University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,GOOD,'Other University',B+,0,Low,no
+Good,Average,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,High,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,GOOD,'Other University',B+,0,Low,no
+Excellent,Low,AVERAGE,'Mumbai University',B-,0,Low,no
+Good,Average,LOW,VIT,A-,0,Low,no
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',A-,0,Low,no
+Average,Low,AVERAGE,'Hyderabad University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Low,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Average,AVERAGE,'Other University',B-,0,Low,no
+Excellent,Average,GOOD,'College of Engineering',B,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,GOOD,'Other University',B,0,Low,no
+Excellent,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Mumbai University',A-,0,Low,no
+Excellent,Bad,AVERAGE,'Other University',A-,0,Low,no
+Average,Excellent,AVERAGE,'Mumbai University',B-,0,Low,no
+Average,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B-,0,Low,no
+Average,Excellent,AVERAGE,NIT,A-,0,Low,no
+Average,Average,AVERAGE,'Hyderabad University',B-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Average,Good,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,GOOD,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Average,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Average,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,no
+Average,Average,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,GOOD,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B,0,High,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B,0,Low,no
+Good,Excellent,GOOD,'Mumbai University',B+,0,Low,no
+Good,Low,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Other University',B-,0,Low,no
+Good,Excellent,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,1,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Other University',B,0,Low,no
+Good,Excellent,AVERAGE,'Hyderabad University',A-,0,Low,no
+Average,Average,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,IIT,A-,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,High,no
+Excellent,Low,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A,0,Low,no
+Good,Average,AVERAGE,'College of Engineering',B+,0,Low,no
+Good,Excellent,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,GOOD,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,no
+Good,Good,AVERAGE,'BITS University',A-,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',A-,2,Low,no
+Good,Good,AVERAGE,'College of Engineering',A-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Excellent,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Average,AVERAGE,'Other University',B,0,Low,no
+Excellent,Excellent,AVERAGE,NIT,B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Excellent,Average,AVERAGE,'Other University',A-,0,High,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,GOOD,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,IIT,A-,0,Low,no
+Good,Average,AVERAGE,'Pune University',B,0,Low,no
+Excellent,Average,AVERAGE,'Pune University',B,0,Low,no
+Excellent,Good,GOOD,'Mumbai University',B,0,Low,no
+Excellent,Average,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,High,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,HIGH,'Other University',B,0,Low,no
+Good,Bad,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,GOOD,'Mumbai University',B,0,Low,no
+Low,Bad,HIGH,'Other University',B+,0,Low,no
+Average,Good,AVERAGE,'Mumbai University',B-,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,High,no
+Excellent,Average,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Low,AVERAGE,'Other University',B,0,Low,no
+Excellent,Excellent,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Average,GOOD,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Average,AVERAGE,'Other University',B,0,Low,no
+Good,Good,GOOD,'Other University',B+,0,High,no
+Good,Excellent,AVERAGE,'Other University',B,0,Low,no
+Good,Average,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'College of Engineering',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Average,AVERAGE,'Other University',A-,0,Low,no
+Good,Excellent,GOOD,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Pune University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B-,0,Low,no
+Excellent,Good,AVERAGE,VIT,A-,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Excellent,GOOD,'Mumbai University',B,0,Low,no
+Excellent,Excellent,AVERAGE,'Other University',A-,0,High,no
+Good,Average,AVERAGE,'Mumbai University',B,0,Low,no
+Excellent,Average,AVERAGE,'Mumbai University',B-,0,Low,no
+Excellent,Average,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,GOOD,'Mumbai University',B,0,Low,no
+Excellent,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,B,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,no
+Excellent,Low,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',A-,0,Low,no
+Excellent,Average,AVERAGE,'Hyderabad University',B+,0,Low,no
+Good,Low,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,GOOD,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,'Other University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,GOOD,'Mumbai University',B+,0,Low,no
+Good,Average,AVERAGE,'Other University',B-,0,Low,no
+Good,Good,GOOD,NIT,B-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B+,0,Low,no
+Good,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Excellent,Low,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',A-,0,Low,no
+Good,Excellent,GOOD,'Other University',B,0,Low,no
+Good,Bad,AVERAGE,'Other University',B-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B+,0,Low,no
+Average,Good,GOOD,'Other University',B+,0,Low,no
+Good,Excellent,AVERAGE,'Other University',A-,0,Low,no
+Good,Excellent,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Pune University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B-,0,Low,no
+Good,Excellent,GOOD,'College of Engineering',A-,0,Low,no
+Excellent,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,VIT,A-,0,Low,no
+Excellent,Excellent,GOOD,'Mumbai University',B+,0,Low,no
+Good,Good,AVERAGE,'Pune University',A-,0,Low,no
+Excellent,Good,AVERAGE,'Mumbai University',B,0,Low,no
+Good,Good,GOOD,'Hyderabad University',A-,0,Low,no
+Excellent,Low,AVERAGE,'Other University',A-,0,Low,no
+Good,Good,AVERAGE,'Pune University',B-,0,Low,no
+Good,Good,GOOD,'Other University',B,0,Low,no
+Good,Good,AVERAGE,'Other University',B+,0,Low,no
+Good,Good,AVERAGE,'Hyderabad University',A-,0,Low,no
+Excellent,Average,AVERAGE,'Other University',B+,0,Low,no

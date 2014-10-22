@@ -6,20 +6,51 @@ import math
 import numpy
 import decimal
 
+
+#This function creates a copy of the input array
+def copy_Array(input_Array):
+  new_Array = [0 for i in range(len(input_Array))]
+  count=0;
+  for x in input_Array:
+    new_Array[count] = x
+    count +=1
+  return new_Array  
+
+
+#This function takes in old value and new value of the weight vector after each iteration
+# and returns True or False if there is convergence
+def convergence(vector_One, vector_Two):
+  result_Vector = [0 for i in range(len(vector_One))]
+  total_Count = 0
+  for position in range(len(vector_One)):
+    result_Vector[position] = vector_One[position] - vector_Two[position]
+
+  #check for convergence, if the difference between all the elements of both the input vectors
+  #is less than 0.04, there is convergence  
+  for x in result_Vector:
+    if math.fabs(x) < 0.04:
+      total_Count +=1
+  
+  if total_Count == len(vector_One):
+    return False
+  return True
+
+
+#This function trains the logistic regression model and returns learnt weight vector
 def logistic_Regression(training_Set_Matrix):
   weight_Vector = [0.0 for i in range(len(training_Set_Matrix[0]))]
   learning_Rate=0.01
-  for x in range(0,100):
+  flag= True
+  while flag:
     gradient_Vector = [0.0 for i in range(len(training_Set_Matrix[0]))]
-    print "The number of times this loop runs "+str(x)
+    old_Weight_Vector = copy_Array(weight_Vector)
     for example in training_Set_Matrix:
-      probability=0.0
-      result =0.0
-      error=0.0
+      probability,scalar_value,error=0.0 ,0.0,0.0
+      #Calculate weight vector * feature vector viz. w.x
       for i in range(len(weight_Vector)):
-        result+= round(weight_Vector[i],2)*float(example[i])  
+        scalar_value+= round(weight_Vector[i],2)*float(example[i])  
         
-      probability= 1.0/(1.0+math.exp(-1*round(result,2)))
+      probability= 1.0/(1.0+math.exp(-1*round(scalar_value,2)))
       
       error=int(example[len(training_Set_Matrix[0])-1]) - probability
       
@@ -27,10 +58,11 @@ def logistic_Regression(training_Set_Matrix):
         gradient_Vector[position] += error*float(example[position])  
       for position in range(len(gradient_Vector)):
         weight_Vector[position] += (learning_Rate*gradient_Vector[position])
-      
-  print "==================Calulation for weight vector is complete=========="
-  print "\n\n The weight vector"
-  print weight_Vector     
+    new_Weight_Vector =weight_Vector
+    flag=convergence(old_Weight_Vector,new_Weight_Vector)
+  #print "==================Calulation for weight vector is complete=========="
+  #print "\n\n The weight vector"
+  #print weight_Vector     
   return weight_Vector     
 
 def test_Result(weight_Vector, testing_Set_Matrix):
@@ -39,7 +71,6 @@ def test_Result(weight_Vector, testing_Set_Matrix):
   for example in testing_Set_Matrix:
     multiplication_Result=0.0
     for i in range(len(weight_Vector)):
-      #print round(weight_Vector[i],2)*int(example[i])
       multiplication_Result+= round(weight_Vector[i],2)*float(example[i])
     prediction =  1.0/(1.0+math.exp(-1*round(multiplication_Result,2)))
     print str(prediction) +" is the predicted value and the true value is "+example[len(testing_Set_Matrix[0])-1]
@@ -52,27 +83,6 @@ def test_Result(weight_Vector, testing_Set_Matrix):
 
   print "The number of ones "+str(count_ones)
   print "The number of zeros "+str(count_zero)  
-    
-def LR(input, target):
-  (row,col) = input.shape 
-  learning_Rate=0.1
-  weight_Vector = numpy.zeros((col,1))
-  gradient_Vector = numpy.zeros((col,1))
-  iteration = 0
-  max_iteration = 10
-  while(True):
-    iteration +=1
-    pred = numpy.dot(input, weight_Vector)
-    #print "prediction", pred
-    error= target-pred
-    print numpy.dot(numpy.transpose(error),error)
-    gradient_Vector= gradient_Vector + numpy.dot(numpy.transpose(error),target)
-    weight_Vector+=  learning_Rate*gradient_Vector
-    #print weight_Vector
-
-    if iteration > max_iteration:
-      break
-
 
 def main(argv):
   setpath()

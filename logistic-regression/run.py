@@ -39,7 +39,7 @@ def convergence(vector_One, vector_Two):
 #This function trains the logistic regression model and returns learnt weight vector
 def logistic_Regression(training_Set_Matrix):
   weight_Vector = [0.0 for i in range(len(training_Set_Matrix[0]))]
-  learning_Rate=0.01
+  learning_Rate=0.001
   flag= True
   while flag:
     gradient_Vector = [0.0 for i in range(len(training_Set_Matrix[0]))]
@@ -65,24 +65,38 @@ def logistic_Regression(training_Set_Matrix):
   #print weight_Vector     
   return weight_Vector     
 
+#This function takes input the learnt weight vectors and the training set and predicts the values
 def test_Result(weight_Vector, testing_Set_Matrix):
-  count_zero=0
-  count_ones=0
+  error_Count=0
+  total_Count = len(weight_Vector)
+  true_positive,true_negative,false_positive,false_negative=0,0,0,0
   for example in testing_Set_Matrix:
     multiplication_Result=0.0
     for i in range(len(weight_Vector)):
       multiplication_Result+= round(weight_Vector[i],2)*float(example[i])
     prediction =  1.0/(1.0+math.exp(-1*round(multiplication_Result,2)))
-    print str(prediction) +" is the predicted value and the true value is "+example[len(testing_Set_Matrix[0])-1]
-    if prediction<0.5:
-      if "0"==example[len(testing_Set_Matrix[0])-1]:
-        count_zero+=1          
-    else:
-      print "One is detected \n\n\n"
-      count_ones+=1
 
-  print "The number of ones "+str(count_ones)
-  print "The number of zeros "+str(count_zero)  
+    if prediction<0.5:
+      print "The predicted value is 0 and the true value is "+ example[len(testing_Set_Matrix[0])-1]
+      if "0"==example[len(testing_Set_Matrix[0])-1]:
+        true_negative+=1
+      else:  
+        error_Count+=1   
+        false_negative +=1   
+    else:
+      print "The predicted value is 1 and the true value is "+ example[len(testing_Set_Matrix[0])-1]
+      if "1"==example[len(testing_Set_Matrix[0])-1]:
+        true_positive +=1
+      else:
+        false_positive +=1  
+        error_Count+=1
+
+
+  print  "\n\nThe accuracy measure is " +str((total_Count - error_Count)*100/total_Count) + "%"
+  print "\n===========The confusion matrix==========="
+  print "\t No \t Yes"
+  print "No \t", str(true_negative) + "\t", str(false_positive)
+  print "Yes \t", str(false_negative) +"\t", str(true_positive)
 
 def main(argv):
   setpath()

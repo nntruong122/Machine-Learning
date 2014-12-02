@@ -23,6 +23,9 @@ class State(object):
         self.col = col
         self.state_type = state_type
 
+    def is_reachable(self):
+        return self.state_type != self.StateType.unreachable
+
 class Grid(object):
     """Grid world represents a grid with states and actions.
     """

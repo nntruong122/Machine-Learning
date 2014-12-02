@@ -51,13 +51,22 @@ class QLearning(object):
 
         return (nextState, actualAction)
 
+    def _generate_reachable_state(self):
+        row = random.randint(0, self.grid.numRows-1)
+        col = random.randint(0, self.grid.numCols-1)
+        state = self.grid.states[row][col]
+        while not state.is_reachable():
+            state = self._generate_reachable_state()
+        return state
+
     def learn(self, alpha = 0.1, gamma = 0.9, convergeWhen = 0.1):
         isConvergenceMet = False
         iterationCount = 1
         while not isConvergenceMet:
             isConvergenceMet = True
             # print("Iteration : %d" % (iterationCount))
-            currentState = nextState = self.grid.states[0][0]
+            # currentState = nextState = self.grid.states[0][0]
+            currentState = nextState = self._generate_reachable_state()
             while True:
                 # print("Current state (%d, %d)" % (currentState.row, currentState.col))
                 desiredAction = self.get_boltzman_action(currentState)
@@ -90,7 +99,7 @@ class QLearning(object):
         print("--------------------")
         for row in self.grid.states:
             for state in row:
-                if state.state_type is not State.StateType.unreachable:
+                if state.is_reachable():
                     print("\nQ-values for State (%d, %d):" % (state.row, state.col))
                     print("--------------------")
                     for action in Action:

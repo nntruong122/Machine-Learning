@@ -16,8 +16,7 @@ class EnumerationDistribution(object):
 
         for element in map:
             total += map[element]
-        if total == 0:
-            
+
         if total != 100:
             subTotal = 0
             for index, element in enumerate(map):

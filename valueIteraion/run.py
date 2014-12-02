@@ -37,10 +37,11 @@ def convergence(firstMatrix, secondMatrix, row_length,col_length):
 
   return zero_count == col_length* row_length
 
-def valueIteration():
+def valueIteration(defaultReward):
   discountedValue = 0.9
   from World import World
   instance = World()
+  instance.default_Reward = defaultReward
   #print instance.isWalls(3,2)
  
   # old actions ={'right':[0.8,0.2],'left':[1.0],'up':[0.8,0.2],'down':[1.0]}
@@ -86,22 +87,8 @@ def valueIteration():
     stop = convergence(valueGrid,previousValueGrid,instance.world_Row,instance.world_Column)
             
   print valueGrid 
-  print iterations
+  print "The number of iterations is "+str(iterations)
 
-
-
-
-
-          
-
-
-
-
-
-
-  # How to iterate through actions dictionary
-  #for k, v in actions.iteritems():
-    #print k,v
 
 
 def main(argv):
@@ -122,7 +109,7 @@ def main(argv):
        defaultReward = arg
 
 
-  valueIteration()
+  valueIteration(int(defaultReward))
 
   
 

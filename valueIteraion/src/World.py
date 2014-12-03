@@ -1,13 +1,14 @@
 import os
 
 class World:
-  
+   #This class contains all the details related to the world.
   walls = [(3,1),(3,3)]
   pit =(1,1)
   start=(4,0)
   goal =(0,3)
   world_Row = 5
   world_Column = 4
+  default_Reward =-1
 
   def __init__(self):
     pass
@@ -63,7 +64,7 @@ class World:
     elif self.isPit(x_position,y_position):
       return -50
     elif x_position < self.world_Row and y_position < self.world_Column:
-      return -1
+      return self.default_Reward
 
   def newPosition(self,direction,x_position,y_position):
     if direction == 'up':

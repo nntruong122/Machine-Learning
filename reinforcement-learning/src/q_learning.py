@@ -59,7 +59,7 @@ class QLearning(object):
             state = self._generate_reachable_state()
         return state
 
-    def learn(self, alpha = 0.1, gamma = 0.9, convergeWhen = 0.1):
+    def learn(self, alpha = 0.1, gamma = 0.9, convergeWhen = 0):
         isConvergenceMet = False
         iterationCount = 1
         while not isConvergenceMet:
@@ -88,9 +88,9 @@ class QLearning(object):
                 if abs(updatedQValue - currentQValue) > convergeWhen * currentQValue:
                     isConvergenceMet = False
                 if currentState.state_type == State.StateType.goal:
+                    iterationCount += 1
                     break
                 currentState = nextState
-                iterationCount += 1
                 # print("Next state (%d, %d)" % (currentState.row, currentState.col))
         self.print_q_values(iterationCount)
 
@@ -112,6 +112,7 @@ class QLearning(object):
         actionValueMap = {}
         for action in Action:
             q_value = self.q_values.get((state.row, state.col, action))
+            # print(actionValueMap)
             actionValueMap[action] = math.exp(q_value) if q_value else 1.0
 
         if(len(actionValueMap) == 0):

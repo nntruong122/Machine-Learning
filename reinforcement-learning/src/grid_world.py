@@ -8,7 +8,7 @@ class State(object):
             raise ValueError(message)
 
     class StateType(Enum):
-        unreachable = 0
+        unreachable = -9999
         normal = -1
         pit = -50
         goal = 10
